@@ -1,0 +1,17 @@
+﻿@model LoginUserVM
+
+<form asp-action="Login" asp-route-ReturnUrl="@Context.Request.Query["ReturnUrl"]">
+    <div asp-validation-summary="All"></div>
+    <div class="form-group">
+        <label>Username</label>
+        <input type="text" class="form-control" asp-for="Username">
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" asp-for="Password">
+    </div>
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
+<div style="text-align:center;">
+    <a asp-action="FacebookLogin" asp-controller="User"> <img src="https://qph.fs.quoracdn.net/main-qimg-1026df84fca620201583e334e1edb3fa" /></a>
+</div>
